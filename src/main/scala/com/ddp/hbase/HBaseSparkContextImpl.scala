@@ -42,7 +42,10 @@ class HBaseSparkContextImpl (sc: SparkContext, properties: Properties) extends H
     )
   }
 
-  override def readAll[T](tableName: String): RDD[T] = ???
+  override def readAll[T](tableName: String, limit: Int = 10000): RDD[T] = {
+      getHBaseDAO().g
+      })
+  }
 
   def getCCParams(cc: Product) : Map[String, String] = {
     val values = cc.productIterator
